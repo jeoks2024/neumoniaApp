@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.image-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.image-section div {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[readonly] {
+    background-color: #e9e9e9;
+    cursor: not-allowed;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-row label,
+.form-row input[type="text"] {
+    width: 48%;
+    margin-bottom: 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .form-row label,
+    .form-row input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

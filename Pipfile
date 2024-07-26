@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "==2.0.2"
+werkzeug = "==2.2.2"
+pyautogui = "*"
+pillow = "*"
+tkcap = "*"
+pydicom = "*"
+img2pdf = "*"
+opencv-python = "*"
+matplotlib = "*"
+pandas = "*"
+tensorflow = "==2.15.0"
+python-xlib = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

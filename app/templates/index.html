@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software para el apoyo al diagnóstico médico de neumonía</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Software para el apoyo al diagnóstico médico de neumonía</h1>
+        <div class="image-section">
+            <div>
+                <h2>Imagen Radiográfica</h2>
+                <img id="radiograph" src="{{ url_for('static', filename='img/question_mark.svg') }}" alt="Imagen Radiográfica">
+            </div>
+            <div>
+                <h2>Imagen con Heatmap</h2>
+                <img id="heatmap" src="{{ url_for('static', filename='img/question_mark.svg') }}" alt="Imagen con Heatmap">
+            </div>
+        </div>
+        <form id="prediction-form" enctype="multipart/form-data">
+            <div class="form-row">
+                <label for="result">Resultado:</label>
+                <input type="text" id="result" name="result" readonly>
+                <label for="probability">Probabilidad:</label>
+                <input type="text" id="probability" name="probability" readonly>
+            </div>
+            <label for="patient-id">Cédula Paciente:</label>
+            <input type="text" id="patient-id" name="patient-id">
+            <div class="form-row">
+                <input type="file" id="image-upload" name="image" accept="image/*" style="display: none;">
+                <button type="button" onclick="document.getElementById('image-upload').click()">Cargar Imagen</button>
+                <button type="button" onclick="predict()">Predecir</button>
+                <button type="reset" onclick="resetForm()">Borrar</button>
+            </div>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

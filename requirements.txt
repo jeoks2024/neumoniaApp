@@ -1,0 +1,12 @@
+Flask==2.0.2
+Werkzeug==2.2.2
+pyautogui
+pillow
+tkcap
+pydicom
+img2pdf
+opencv_python
+matplotlib
+pandas
+tensorflow==2.15.0
+python-xlib
